@@ -536,6 +536,240 @@
 
     <style>
         /* Base Responsive Styles */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 960px;
+            }
+            
+            .display-3 {
+                font-size: 2.8rem;
+            }
+            
+            .display-4 {
+                font-size: 2.3rem;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .container {
+                max-width: 720px;
+            }
+
+            .display-3 {
+                font-size: 2.5rem;
+            }
+
+            .display-4 {
+                font-size: 2rem;
+            }
+
+            .lead {
+                font-size: 1.1rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .navbar-collapse {
+                background: var(--bs-light);
+                padding: 15px;
+                border-radius: 8px;
+                margin-top: 10px;
+            }
+
+            .nav-link {
+                padding: 8px 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                max-width: 540px;
+            }
+
+            .display-3 {
+                font-size: 2.2rem;
+            }
+
+            .display-4 {
+                font-size: 1.8rem;
+            }
+
+            .lead {
+                font-size: 1rem;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            .btn-lg {
+                font-size: 1rem;
+                padding: 0.5rem 1.2rem;
+            }
+
+            .card-title {
+                font-size: 1.2rem;
+            }
+
+            .card-text {
+                font-size: 0.9rem;
+            }
+
+            .form-control {
+                font-size: 0.9rem;
+            }
+
+            .skills-logo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .skills-logo i {
+                font-size: 2.5rem;
+            }
+
+            .floating-image {
+                width: 140px;
+                height: 140px;
+            }
+
+            .name-tag {
+                font-size: 0.9rem;
+                padding: 3px 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                max-width: 100%;
+                padding: 0 15px;
+            }
+
+            .display-3 {
+                font-size: 1.8rem;
+            }
+
+            .display-4 {
+                font-size: 1.5rem;
+            }
+
+            .lead {
+                font-size: 0.9rem;
+            }
+
+            .section {
+                padding: 30px 0;
+            }
+
+            .btn-lg {
+                font-size: 0.9rem;
+                padding: 0.4rem 1rem;
+            }
+
+            .card-title {
+                font-size: 1.1rem;
+            }
+
+            .card-text {
+                font-size: 0.85rem;
+            }
+
+            .form-control {
+                font-size: 0.85rem;
+            }
+
+            .skills-logo {
+                width: 70px;
+                height: 70px;
+            }
+
+            .skills-logo i {
+                font-size: 2rem;
+            }
+
+            .floating-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            .name-tag {
+                font-size: 0.8rem;
+                padding: 2px 8px;
+            }
+
+            .social-link {
+                padding: 0.8rem;
+            }
+
+            .social-link i {
+                font-size: 1.1rem;
+            }
+
+            .social-link span {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .display-3 {
+                font-size: 1.5rem;
+            }
+
+            .display-4 {
+                font-size: 1.3rem;
+            }
+
+            .lead {
+                font-size: 0.85rem;
+            }
+
+            .btn-lg {
+                font-size: 0.85rem;
+                padding: 0.35rem 0.9rem;
+            }
+
+            .card-title {
+                font-size: 1rem;
+            }
+
+            .card-text {
+                font-size: 0.8rem;
+            }
+
+            .form-control {
+                font-size: 0.8rem;
+            }
+
+            .skills-logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .skills-logo i {
+                font-size: 1.8rem;
+            }
+
+            .floating-image {
+                width: 100px;
+                height: 100px;
+            }
+
+            .name-tag {
+                font-size: 0.75rem;
+                padding: 2px 6px;
+            }
+        }
+
+        /* Fix for iOS viewport height */
+        @supports (-webkit-touch-callout: none) {
+            .min-vh-100 {
+                min-height: -webkit-fill-available;
+            }
+        }
+
+        /* Base Responsive Styles */
         html {
             scroll-behavior: smooth;
         }
@@ -830,13 +1064,6 @@
         /* Add smooth transitions for responsive changes */
         * {
             transition: all 0.3s ease;
-        }
-
-        /* Fix for iOS viewport height issues */
-        @supports (-webkit-touch-callout: none) {
-            .min-vh-100 {
-                min-height: -webkit-fill-available;
-            }
         }
 
         /* Snake-like Cursor Movement */
