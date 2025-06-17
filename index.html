@@ -139,30 +139,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div v-for="skill in skills" :key="'dup-' + skill.id" class="skill-card">
-                                        <div class="card shadow-lg text-center">
-                                            <div class="card-body">
-                                                <i :class="skill.icon" class="fa-3x mb-3 text-primary"></i>
-                                                <h4 class="card-title fs-5">{{ skill.name }}</h4>
-                                                <p class="card-text text-muted">{{ skill.description }}</p>
-                                                <div class="skill-details">
-                                                    <button class="close-tooltip" @click="closeTooltip">&times;</button>
-                                                    <h5>Key Features</h5>
-                                                    <ul>
-                                                        <li v-for="(feature, index) in skill.features" :key="index">
-                                                            <i class="fas fa-check-circle"></i>
-                                                            {{ feature }}
-                                                        </li>
-                                                    </ul>
-                                                    <div class="experience">
-                                                        <i class="fas fa-clock me-2"></i>
-                                                        {{ skill.experience }}
-                                                    </div>
-                                                </div>
-                                                <div class="tooltip-overlay"></div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -673,31 +649,42 @@
 
         /* Skills Section Responsive */
         .skills-carousel-wrapper {
-            overflow: hidden;
+            overflow: visible;
             width: 100%;
             padding: 20px 0;
         }
 
-        @media (max-width: 768px) {
-            .skills-carousel {
-                animation: none;
-                flex-wrap: wrap;
-                justify-content: center;
-                width: 100%;
-            }
+        .skills-carousel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+            width: 100%;
+        }
 
-            .skill-card {
-                flex: 0 0 calc(50% - 20px);
-                max-width: calc(50% - 20px);
-                margin-bottom: 20px;
+        .skill-card {
+            flex: 0 0 300px;
+            padding: 10px;
+        }
+
+        .skill-card .card {
+            height: 100%;
+            position: relative;
+        }
+
+        /* Remove the slide animation */
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(0);
             }
         }
 
-        @media (max-width: 576px) {
-            .skill-card {
-                flex: 0 0 100%;
-                max-width: 100%;
-            }
+        /* Remove hover pause */
+        .skills-carousel:hover {
+            animation-play-state: running;
         }
 
         /* Projects Section Responsive */
@@ -997,9 +984,11 @@
         }
 
         .skills-carousel {
-            display: flex;
-            animation: slide 20s linear infinite;
-            width: calc(300px * 12);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+            width: 100%;
         }
 
         .skill-card {
@@ -1012,6 +1001,7 @@
             position: relative;
         }
 
+        /* Remove the slide animation */
         @keyframes slide {
             0% {
                 transform: translateX(0);
