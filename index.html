@@ -566,68 +566,26 @@
         }
 
         /* Home Section Responsive */
-        .home-section {
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96c93d);
-            background-size: 300% 300%;
-            animation: gradientBG 15s ease infinite;
-            position: relative;
-            display: flex;
-            align-items: center;
-            padding: 80px 0;
-        }
-
-        @keyframes gradientBG {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        /* Dark theme gradient */
-        .dark-theme .home-section {
-            background: linear-gradient(45deg, #2c3e50, #3498db, #2980b9, #1abc9c);
-            background-size: 300% 300%;
-        }
-
-        /* Remove the overlay since we don't need it anymore */
-        .home-section::before {
-            display: none;
-        }
-
-        /* Ensure content stays visible */
-        .home-section .container {
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Adjust text colors for better visibility on gradient */
-        .home-section .theme-text {
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        .home-section .theme-text-secondary {
-            color: #ffffff;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Keep floating images above the gradient */
-        .floating-images-container {
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Responsive adjustments for background */
         @media (max-width: 768px) {
             .home-section {
                 background-position: center;
                 padding: 60px 0;
-                background-attachment: scroll; /* Better performance on mobile */
+                background-attachment: scroll;
+            }
+
+            .home-section .display-3 {
+                font-size: 2.2rem !important;
+                line-height: 1.3;
+            }
+
+            .home-section .lead {
+                font-size: 1rem !important;
+                line-height: 1.5;
+            }
+
+            .home-section .btn-lg {
+                font-size: 1rem;
+                padding: 0.5rem 1.2rem;
             }
         }
 
@@ -636,9 +594,37 @@
                 background-position: center;
                 padding: 40px 0;
             }
+
+            .home-section .display-3 {
+                font-size: 1.8rem !important;
+                line-height: 1.2;
+            }
+
+            .home-section .lead {
+                font-size: 0.9rem !important;
+                line-height: 1.4;
+            }
+
+            .home-section .btn-lg {
+                font-size: 0.9rem;
+                padding: 0.4rem 1rem;
+            }
         }
 
-        
+        @media (max-width: 375px) {
+            .home-section .display-3 {
+                font-size: 1.5rem !important;
+            }
+
+            .home-section .lead {
+                font-size: 0.85rem !important;
+            }
+
+            .home-section .btn-lg {
+                font-size: 0.85rem;
+                padding: 0.35rem 0.9rem;
+            }
+        }
 
         /* About Section Responsive */
         @media (max-width: 768px) {
